@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "GPT Helper",
+    "version": "1.0",
+    "permissions": ["alarms", "tabs", "nativeMessaging", "storage", "activeTab", "scripting"],
+    "background": {
+      "service_worker": "js/background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://*.openai.com/*"],
+        "js": ["js/content.js"]
+      }
+    ]
+  }
+  
